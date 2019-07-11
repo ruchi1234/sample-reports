@@ -1,5 +1,6 @@
 {
   "name": "sample-reports",
+  "homepage" : "http://dezireit.com/sample-reports/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

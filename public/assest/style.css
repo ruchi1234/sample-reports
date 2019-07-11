@@ -211,17 +211,17 @@
 	color: #444444;
 	text-align: center;
 }
-.yelp_channel {
+.customer_channel {
 	float: left;
 	width: 50%;
 	padding-top: 35px;
 }
-.yelp_channel img {
+.customer_channel img {
 	display: inline-block;
 	vertical-align: top;
 	padding-top: 4px;
 }
-.yelp_channel p {
+.customer_channel p {
 	display: inline-block;
 	padding: 0;
 	margin: 0;
@@ -231,17 +231,17 @@
 	color: #444444;
 	padding-left: 20px;
 }
-.auth_right {
+.company_name {
 	float: left;
 	width: 50%;
 	padding-top: 35px;
 }
-.auth_right img {
+.company_name img {
 	display: inline-block;
 	vertical-align: top;
 	padding-top: 4px;
 }
-.auth_right p {
+.company_name p {
 	display: inline-block;
 	padding: 0;
 	margin: 0;
@@ -456,7 +456,7 @@
 		padding-top: 0px;
 		font-size: 29px;
 	}
-	.yelp_channel, .auth_right, .completed_partols, .reported_inc {
+	.customer_channel, .company_name, .completed_partols, .reported_inc {
 		float: none;
 		width: 100%;
 	}
@@ -476,20 +476,20 @@
 		padding-top: 18px;
 		padding-bottom: 18px;
 	}
-	.yelp_channel p, .auth_right p, .completed_partols p, .completed_partols p , .reported_inc p {
+	.customer_channel p, .company_name p, .completed_partols p, .completed_partols p , .reported_inc p {
 		font-size: 25px;
 	}
 	.your_stats {
 		font-size: 31px;
 	}
 	.auth_bottom, .patrols_sec_btm {
-		margin-top: 45px;
+		margin-top : 45px;
 	}
 	.push_down, .coulpe_para {
-		margin-top: 20px;
+		margin-top : 20px;
 	}
 	.page_footer {
-		padding-left: 0;
+		padding-left : 0;
 		padding-right: 0;
 	}
 }
