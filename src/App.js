@@ -1,8 +1,32 @@
 import React from 'react';
+import CanvasJSReact from './canvasjs.react';
 const  data       = require('./client.json')
-const  clientdata = data.data
+const  clientdata = data.data;
+var CanvasJS = CanvasJSReact.CanvasJS;
+var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
-function App() {
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  
+  render() {
+    var options = {
+      axisY:{
+        gridThickness: 0,
+      },
+			data: [
+        {
+          type: "column",
+          color: "salmon",
+          indexLabel: "{markerImageUrl}{y}",
+          indexLabelPlacement: "outside",  
+          indexLabelOrientation: "horizontal",
+          dataPoints: 
+            clientdata.personnel
+        }
+			]
+		}
   return (
     <div className="App">
       <div className="container">
@@ -48,7 +72,14 @@ function App() {
         </div>
         <div className="personal_right">
           <p className="personal_detected"> Personnel Detected </p>
-            <img src="../assest/images/chart.jpg" alt="" title="" className="chart_img" />
+           
+            <div> 
+            <CanvasJSChart options = {options}
+				/* onRef={ref => this.chart = ref} */
+			/>
+       <img src="../assest/images/chart.jpg" alt="" title="" className="chart_img" />
+            </div>
+           
           <p className="cobalt_schedule"> Your Cobalt Patrol Schedule </p>
         </div>
         <div className="clear"></div>
@@ -118,5 +149,6 @@ function App() {
       {/* End What have we been up to? section */}
     </div>
   );
+  }
 }
 export default App;
