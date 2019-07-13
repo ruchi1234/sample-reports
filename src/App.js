@@ -2,14 +2,13 @@ import React from 'react';
 import CanvasJSReact from './canvasjs.react';
 const  data       = require('./client.json')
 const  clientdata = data.data;
-var CanvasJS = CanvasJSReact.CanvasJS;
-var CanvasJSChart = CanvasJSReact.CanvasJSChart;
+var    CanvasJS      = CanvasJSReact.CanvasJS;
+var    CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
 class App extends React.Component {
   constructor(props) {
     super(props);
   }
-  
   render() {
     var options = {
       axisY:{
@@ -19,11 +18,19 @@ class App extends React.Component {
         {
           type: "column",
           color: "salmon",
-          indexLabel: "{markerImageUrl}{y}",
+          indexLabel: "{y}",
           indexLabelPlacement: "outside",  
           indexLabelOrientation: "horizontal",
           dataPoints: 
-            clientdata.personnel
+            [
+              { label: "MON",  y: clientdata.personnel[0]  },
+              { label: "TUE",  y: clientdata.personnel[1]  },
+              { label: "WED",  y: clientdata.personnel[2]  },
+              { label: "THU",  y: clientdata.personnel[3]  },
+              { label: "FRI",  y: clientdata.personnel[4]  },
+              { label: "SAT",  y: clientdata.personnel[5]  },
+              { label: "SUN",  y: clientdata.personnel[6]  }
+          ]
         }
 			]
 		}
